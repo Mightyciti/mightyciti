@@ -1,0 +1,150 @@
+{% load static %}
+{% load custom_tag %}
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Omowoli</title>
+  <meta content="width=device-width, initial-scale=1.0" name="omowoli">
+  <meta content="This is the official website of Pastor Isaiah O. Aladeolu" name="Omowoli">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="Omowoli">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="www.omowoli.com">
+  <meta property="og:site_name" content="Omowoli">
+  <meta property="og:description" content="This is the official website of Pastor Isaiah O. Aladeolu">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'Home2/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'Home/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'Home/css/magnific-popup.css' %}">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'Home2/lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'Home2/lib/animate-css/animate.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'Home2/css/style.css' %}" rel="stylesheet">
+
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="{% static 'Program_slider/css/program_slider_style.css' %}">
+    
+  <!--Only for demo purpose - no need to add.-->
+  <link rel="stylesheet" type="text/css" href="{% static 'Program_slider/css/program_slider_demo.css' %}" />
+
+  <link rel="stylesheet" type="text/css" href="{% static 'Testimony/testimony_demo.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'Testimony/testimony_style_new.css' %}" />
+
+  <style type="text/css">
+
+    @keyframes slidy {
+      0% { left: 0%; }
+      20% { left: 0%; }
+      25% { left: -100%; }
+      45% { left: -100%; }
+      50% { left: -200%; }
+      70% { left: -200%; }
+      75% { left: -300%; }
+      95% { left: -300%; }
+      100% { left: -400%; }
+      }
+      
+      body { margin: 0; } 
+      div#slider { overflow: hidden; }
+      div#slider figure img { width: 20%; float: left; }
+      div#slider figure { 
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation: 30s slidy infinite; 
+      }
+    
+    .responsive-map{
+    overflow: hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+    .responsive-map iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="preloader"></div>
+
+{% header %}
+
+{% block content %}
+
+
+
+
+
+{% endblock content %}
+  <!--==========================
+  Footer
+============================-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="copyright">
+          &copy; Copyright <strong>2022 Omo-Woli</strong>. All Rights Reserved | <a href="#">gmail.com</a>
+             <p><i class="fa fa-phone mr-1"></i><strong>Prayer Line:</strong> 08028295998, 08075459001, 08102901778</br>
+             <i class="fa fa-map-marker mr-1"></i> Christ Apostolic Church Ori Oke Aanun Km. 2 Isokun, off Arulogun road, Ojoo Ibadan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- #footer -->
+
+  <!-- Required JavaScript Libraries -->
+  <script src="{% static 'Home2/lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'Home2/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'Home2/lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'Home2/lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'Home2/lib/morphext/morphext.min.js' %}"></script>
+  <script src="{% static 'Home2/lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'Home2/lib/stickyjs/sticky.js' %}"></script>
+  <script src="{% static 'Home2/lib/easing/easing.js' %}"></script>
+
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="{% static 'Home2/js/custom.js' %}"></script>
+
+  <script src="{% static 'Home2/contactform/contactform.js' %}"></script>
+
+  <script src="{% static 'Home/js/jquery.js' %}"></script>
+<script src="{% static 'Home/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'Home/js/particles.min.js' %}"></script>
+<script src="{% static 'Home/js/app.js' %}"></script>
+<script src="{% static 'Home/js/jquery.parallax.js' %}"></script>
+<script src="{% static 'Home/js/smoothscroll.js' %}"></script>
+<script src="{% static 'Home/js/custom.js' %}"></script>
+<script src="{% static 'Home/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'Home/js/magnific-popup-options.js' %}"></script>
+<script src="{% static 'Home2/js/jquery.min.js' %}"></script>
+
+</body>
+
+</html>

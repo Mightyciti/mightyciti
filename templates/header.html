@@ -1,0 +1,66 @@
+{% load static %}
+
+<header id="header">
+  <div class="container">
+
+    <div id="logo" class="pull-left">
+      <a href="#hero"><img src="{% static 'Home2/images/img/logo/header.png' %}" alt="Omowoli" title="" /></img></a>
+      <!-- Uncomment below if you prefer to use a text image -->
+      <!--<h1><a href="#hero">Header 1</a></h1>-->
+    </div>
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu">
+      <li class="menu-active"><a href="{% url 'index' %}">Home</a></li>
+        <li class="menu-has-children"><a href="">About</a>
+          <ul>
+            <li><a href="{% url 'about_omowoli' %}">About Omo Woli</a></li>
+            <li><a href="{% url 'about_orioke_aanu' %}">About Ori Oke Aanu</a></li>
+            <li><a href="{% url 'about_babaaladeolu' %}">About Baba Aladeolu</a></li>
+          </ul>
+        </li>
+        <li class="menu-has-children"><a href="">Media</a>
+          <ul>
+            <li><a href="{% url 'photo' %}">Photo Gallery</a></li>
+            <li><a href="{% url 'audio' %}">Audio Messages</a></li>
+            <li><a href="{% url 'video' %}">Video Messages </a></li>
+          </ul>
+        </li>
+        <li><a href="{% url 'offering' %}">Give Online</a></li>
+        <li class="menu-has-children"><a href="">Contact</a>
+          <ul>
+            <li><a href="{% url 'testimony' %}">Share Testimony</a></li>
+            <li><a href="{% url 'prayer_request' %}">Prayer Request</a></li>
+          </ul>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="menu-has-children"><a href="">Admin</a>
+          <ul>
+            <li class="menu-has-children"><a href="#">Media</a>
+              <ul>
+                <li><a href="{% url 'add_image' %}">Upload Images</a></li>
+                <li><a href="{% url 'add_video' %}">Upload Video</a></li>
+                <li><a href="{% url 'add_audio' %}">Upload Audio</a></li>
+              </ul>
+            </li>
+            <li class="menu-has-children"><a href="#">Information</a>
+              <ul>
+                <li><a href="{% url 'pending_testimonies' %}">Testimonies</a></li>
+                <li><a href="{% url 'prayer_list' %}">Prayer Requests</a></li>
+                <li><a href="{% url 'user_number' %}">User Numbers</a></li>
+                <li><a href="{% url 'user_email' %}">User Emails</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'add_program' %}">Add Program</a></li>
+            <li><a href="{% url 'bulk_email' %}">Send Mail Message</a></li>
+            <li><a href="{% url 'bulk_text' %}">Send text message</a></li>
+            <li><a href="{% url 'signout' %}">Sign out</a></li>
+          </ul>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+    <!-- #nav-menu-container -->
+  </div>
+</header>
+<!-- #header -->

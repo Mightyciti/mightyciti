@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<section id="home" class="parallax-section" style=" background-color:black;">
+  <div class="overlay"></div>
+  <div id="particles-js"></div>
+  <div class="container">
+       <div class="row">
+            <div class="col-md-12 col-sm-12">
+                 <h1>Phone Number Extraction</h1>
+            </div>
+       </div>
+  </div>
+</section>
+
+<section id="about">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-offset-1 col-md-10 col-sm-12 text-justify">
+                {% for user in users %}
+                    <div class="col-md-4 col-sm-4">
+                         <p><strong>{{user.Mobile_Number}}</strong></p>
+                    </div>
+                {% endfor %}
+               </div>
+          </div>
+     </div>
+</section>
+
+{% endblock content %}

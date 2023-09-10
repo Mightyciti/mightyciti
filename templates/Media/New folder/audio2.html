@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("https://images.unsplash.com/photo-1468436139062-f60a71c5c892?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+      min-height: 100%;
+      padding: 120px 20px;
+    }
+
+    .w3-bar .w3-button {
+        padding: 16px;
+      }
+    
+
+</style>
+
+    <header class="bgimg-1">
+        <div class="container" >
+
+              <h3 class="w3-large text-3xl md:text-4xl text-center mb-10" style="color:white">About Baba Aladeolu</h3>
+        </div> 
+    </header>
+
+     <section class="about section" id="about">
+        <div class="container">
+             <div class="row">
+
+                 <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+                         
+                     <div class="team-thumb">
+                         <img src="{% static 'Home/images/team/team-image.jpg' %}" class="img-fluid" alt="Trainer">
+
+                         <div class="team-info d-flex flex-column">
+
+                             <h3>Pastor Isiah Alade</h3>
+                             <span>Omo Woli</span>
+
+                             <ul class="social-icon mt-3">
+                                 <li><a href="#" class="fa fa-twitter"></a></li>
+                                 <li><a href="#" class="fa fa-instagram"></a></li>
+                                 <li><a href="#" class="fa fa-whatsapp"></a></li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="mt-lg-5 mb-lg-0 mb-6 col-lg-8 col-md-10 mx-auto col-12 text-justify">
+                     <h2 class="mb-4" data-aos="fade-up" data-aos-delay="400">About Omo Woli</h2>
+
+                     <p data-aos="fade-up" data-aos-delay="400">The life of Isaiah Olaoluwatoyi Alade fondly called Omowoli is a fulfillment of the scriptures in Psalm 25:13 which declared, “…and his offspring shall inherit the earth”.</p>
+
+                     <p data-aos="fade-up" data-aos-delay="500">This scripture is fulfilled in the life of Son of Prophet (Omowoli) born on July 16, 1977 into a humble family of Prophet Moses Alade & Midwife Grace Olufunmilade Alade in the city of Ibadan, Oyo State, Nigeria. His father is from a village in Ijaye, Oyo State located in the south-western part of Nigeria and mother from Ode-Omu in Osun State. </p>
+
+                     <p data-aos="fade-up" data-aos-delay="600">Isaiah Olaoluwatomiyole Oluwatoyi Alade often humorously states that his family is a linage of prophets as his grandfather, in person of Prophet Jacob Alade, and his father are both prophets though what he possessed were physical intangibles such as focus, consistency, diligence, ambition, a brilliant mind and a determination to succeed in life</p>
+
+                     <p data-aos="fade-up" data-aos-delay="700"> In 1991 Isaiah Alade was admitted into Bashorun Ojoo High School, Ibadan, Oyo State, in western Nigeria and as a youth he discovered a passion for ministerial work that even his mates in the school called him Pastor. </p>
+                        
+                    <p data-aos="fade-up" data-aos-delay="800"> As a young man, after secondary school in the year 1996, he joined a business enterprise in Iwo Road under the leadership of Elder Oluwatoyin Ogunkoya and from where he proceeded to the Christ Apostolic Church Theological Seminary, Ibadan campus in affiliation with University of Ibadan between the year 1998-2000. After his ordination as a Pastor in Christ Apostolic Church in the year 2001, he went further on in his academic pursuits to Ambrose Ali University (ESC) Ekpoma, Ibadan Campus to obtain a Bachelors degree in Public Administration in 2005. He had however started ministerial work in the year 1997 as an Evangelist in the Christ Apostolic Church and later in the year 2017, received grace by the authority of Christ Apostolic Church Worldwide to be elevated to the office of a District Superintendent of the Christ Apostolic Church Prayer Mountain (Orioke Aanu) which God has used his father, Prophet Moses Adelola Aladeolu, to establish. </p>
+                        
+                    <p data-aos="fade-up" data-aos-delay="900"> His ministerial focus is to bring hope and victory to the people, he is a lover of youths. In 2005, Son of Prophet (Omowoli) Isaiah O. Alade got married to his beloved wife Eunice Adeola Alade (Nee Adeboboye) and God has blessed their marriage with children both male and female. </p>
+                 </div>
+                    
+             </div>
+        </div>
+</section>
+{% endblock content %}

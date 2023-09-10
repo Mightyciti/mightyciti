@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- Home Section -->
+
+<section id="home" class="main-about parallax-section" style="background-image: url('https://qcca.org.au/wp-content/uploads/2013/10/bible-dark.jpg');">
+     <div class="overlay"></div>
+     <div id="particles-js"></div>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <h3> About Baba Orioke </h3>
+                    <h1>Propet Moses Alade</h1>
+                    <h5>Founder  C.A.C Mountain of Mercy </h5>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+<!-- About Section -->
+
+<section id="about">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-1 col-md-10 col-sm-12 text-justify">
+
+                    <div class="col-md-4 col-sm-4">
+                         <img src="{% static 'Home2/images/img/baba_aladeolu.jpg' %}" class="img-responsive" alt="Baba Aladeolu">
+                    </div>
+
+                    <div class="col-md-8 col-sm-8">
+                         <h3>About Baba Orioke</h3>
+                         <p>The life of Isaiah Olaoluwatoyi Alade fondly called Omowoli is a fulfillment of the scriptures in Psalm 25:13 which declared, “…and his offspring shall inherit the earth”.</p>
+                         <p>This scripture is fulfilled in the life of Son of Prophet (Omowoli) born on July 16, 1977 into a humble family of Prophet Moses Alade & Midwife Grace Olufunmilade Alade in the city of Ibadan, Oyo State, Nigeria. His father is from a village in Ijaye, Oyo State located in the south-western part of Nigeria and mother from Ode-Omu in Osun State.</p>
+                         <p>Isaiah Olaoluwatomiyole Oluwatoyi Alade often humorously states that his family is a linage of prophets as his grandfather, in person of Prophet Jacob Alade, and his father are both prophets though what he possessed were physical intangibles such as focus, consistency, diligence, ambition, a brilliant mind and a determination to succeed in life.</p>
+                         <p>In 1991 Isaiah Alade was admitted into Bashorun Ojoo High School, Ibadan, Oyo State, in western Nigeria and as a youth he discovered a passion for ministerial work that even his mates in the school called him Pastor.</p>
+                         <p>As a young man, after secondary school in the year 1996, he joined a business enterprise in Iwo Road under the leadership of Elder Oluwatoyin Ogunkoya and from where he proceeded to the Christ Apostolic Church Theological Seminary, Ibadan campus in affiliation with University of Ibadan between the year 1998-2000. After his ordination as a Pastor in Christ Apostolic Church in the year 2001, he went further on in his academic pursuits to Ambrose Ali University (ESC) Ekpoma, Ibadan Campus to obtain a Bachelors degree in Public Administration in 2005. He had however started ministerial work in the year 1997 as an Evangelist in the Christ Apostolic Church and later in the year 2017, received grace by the authority of Christ Apostolic Church Worldwide to be elevated to the office of a District Superintendent of the Christ Apostolic Church Prayer Mountain (Orioke Aanu) which God has used his father, Prophet Moses Adelola Aladeolu, to establish.</p>
+                         <p>His ministerial focus is to bring hope and victory to the people, he is a lover of youths. In 2005, Son of Prophet (Omowoli) Isaiah O. Alade got married to his beloved wife Eunice Adeola Alade (Nee Adeboboye) and God has blessed their marriage with children both male and female.</p>
+                    </div>
+
+                    
+
+                    <div class="clearfix"></div>
+                    <h3>Recommended for you</h3>
+                    <hr>
+
+                    <div class="col-md-4 col-sm-4"><a href="{% url 'about_orioke_aanu' %}">
+                         <img src="{% static 'Home2/images/img/mountain.jpg' %}" class="img-responsive" alt="Oke Aanu" width=400 heigth=400>
+                         <h3>Ori-Oke Aanu</h3>
+                         <p>…a place where mercy speaks</p></a>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-4"><a href="{% url 'about_omowoli' %}">
+                         <img src="{% static 'Home2/images/img/woli_omo.jpg' %}" class="img-responsive" alt="Omo Woli" width=400 heigth=400>
+                         <h3>Omo Woli</h3>
+                         <p>District Superintendent of C.A.C Ori Oke Aanun</p></a>
+                    </div>
+					
+               </div>
+
+          </div>
+     </div>
+</section>
+
+{% endblock content %}

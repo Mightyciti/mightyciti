@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  header {
+      text-align: center;
+    }
+    
+    body {
+      text-align: center;
+    }
+    
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        display: block
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 35px;
+      height: 0;
+      overflow: hidden;
+  }
+
+  
+  .video-container iframe {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+
+
+  .container1 {
+      width: 768px;
+      margin: 0 auto;
+    }
+    
+    img {max-width:100%; height:auto}
+    
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .video-player__playing {
+      margin-bottom: 1.000em;
+    }
+    
+    .video-player__thumbs {
+      overflow: hidden;
+    }
+    
+    .video-thumb {
+      float: left;
+      width: 23.5%;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 13%;
+      margin-bottom: 0.375em;
+      cursor: pointer;
+    }
+    
+    .video-thumb:not(:last-child) {
+      margin-right: 2%;
+    }
+    
+    .video-thumb.active {
+      cursor: default;
+    }
+    
+    .video-thumb:before,
+    .video-thumb:after {
+      display: block;
+      position: absolute;
+      transition: all 250ms ease-out;
+      z-index: 1;
+    }
+    
+    .video-thumb:before {
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(247, 148, 30, 0);
+    }
+    
+    
+    .video-thumb:after {
+      content: "\f144";
+      font-family: "FontAwesome";
+      top: 50%;
+      left: 50%;
+      margin: -0.458em 0 0 -0.500em;
+      color: rgba(255, 255, 255, 0);
+      font-size: 3.000em;
+      line-height: 1;
+    }
+    
+    .video-thumb img {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+    }
+
+</style>
+
+<section id="home" class="main-about parallax-section" style="background-image: url('https://media.istockphoto.com/photos/robotics-automatic-arms-machine-of-making-movie-and-tv-commercial-in-picture-id1150202765?b=1&k=20&m=1150202765&s=170667a&w=0&h=_8sUpD2fA_ZKnnIol1nrj3wvI-KK-NbdDn96OW3ZqNI=');">
+    <div class="overlay"></div>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h1>Videos</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="portfolio">
+  <div class="container wow">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="section-title">Video Messages</h3>
+        <div class="section-title-divider"></div>
+        <p class="section-description">click on the play button to preview or click on the video title to watch in bigger mode</p>
+      </div>
+    </div>
+
+    {% for vid in video %}
+    <div class="row">
+      <div class="col-md-3">
+        <a href="{% url 'video_detail' vid.id %}">
+        <div class='img-list-image'>
+          <iframe src="{{vid.embeded_link}}" width="200" height="100" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+          <div class="details">
+            <h4>{{vid.Video_Title}}</h4>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+    </div>
+    <div class="pagination">
+      <span class="step-links">
+          {% if video.has_previous %}
+              <a href="?page=1">&laquo; first</a>
+              <a href="?page={{ video.previous_page_number }}">previous</a>
+          {% endif %}
+  
+          <span class="current">
+              Page {{ video.number }} of {{ video.paginator.num_pages }}.
+          </span>
+  
+          {% if video.has_next %}
+              <a href="?page={{ video.next_page_number }}">next</a>
+              <a href="?page={{ video.paginator.num_pages }}">last &raquo;</a>
+          {% endif %}
+      </span>
+ </div>
+  </div>
+</section>
+
+{% endblock content %}

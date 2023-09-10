@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- Home Section -->
+
+<section id="home" class="main-about parallax-section" style="background-image: url('https://images.unsplash.com/photo-1554176259-aa961fc32671?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMG1vdW50YWlufGVufDB8fDB8fA%3D%3D&w=1000&q=80');">
+     <div class="overlay"></div>
+     <div id="particles-js"></div>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <h3> About C.A.C Mountain of Mercy </h3>
+                    <h1>…a place where mercy speaks</h1>
+                    <h5>Christ Apostolic Church, Ori Oke Aanun, Km. 2 Isokun, off Arulogun road, Ojoo, Ibadan</h5>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+<!-- About Section -->
+
+<section id="about">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-1 col-md-10 col-sm-12 text-justify">
+
+                    <div class="col-md-4 col-sm-4">
+                         <img src="{% static 'Home2/images/img/mountain.jpg' %}" class="img-responsive" alt="About Image">
+                    </div>
+
+                    <div class="col-md-8 col-sm-8">
+                         <h3>Mission Statement</h3>
+                         <p>To raise end time models of integrity, power and purpose.</p>
+                         <hr>
+                         <h3>Vision Statement</h3>
+                         <p>To be an evangelistic caring family, committed to every member’s total fulfillment through teaching and creating an atmosphere of worship and ministry in partnership with the Holy Spirit.</p>
+                         <hr>
+                         <h3>Short Story about CAC Mountain of Mercy</h3>
+                         <p>Christ Apostolic Church, Ori Oke Aanun, Km. 2 Isokun, off Arulogun road, Ojoo Ibadan was founded in April 1992 under the leadership of the Holy Spirit through his servant Prophet Moses Adelola Aladeolu.</p>
+                         <p>After a 21 days fasting and prayer, the Lord told his servant to meet with Him on a mountain that has gate, made with stone.</p>
+                         <p>The man of God immediately called his close associates and Pastor friends to inquire from them about the description of where God gave to him, but all effort made was futile.</p>
+                         <p>This made him to start another days of fasting and prayer to ask God for the location of the described mountain. Then the Lord gave him another instruction to meet with Him at a mountain around Shasha area with the purpose of going for morning cry (every morning) into the bush.</p>
+                         <p>Although this instruction sounded stupid to him (morning cry in the bush), yet he chose to follow through.</p>
+                         <p>During one of the morning cry activity, while on his way to the location God sent him to preach that day, he crushed his feet on a stone and due to the pains he felt on the toe, he sat down to add pressure on the affected toe. While he sat down meditating on what next to do, the Lord opened his eyes, unknown to him, he was sitting on one of the pillars of the gate. Immediately he discovered this, he went into praising God for fulfilling His promise by bringing him to the location.</p>
+                         <p>Hence, from that day, he started living on the mountain; praying and giving thanks unto God, without any shelter or house to protect him from the rain and scorching sun.</p>
+                         <p>During this time, God preserved him from being killed by wild animals and other mysterious being. The Lord also kept him safe from anything that could have harmed him during his stay on the mountain.</p>
+                         <p>In one of his days on the mountain, the Lord asked him to go into another 21 days fasting and prayer. While observing this fasting and prayer as instructed by God, he saw a ghost; who appeared to him in form of a man, and confirmed the authenticity that the Lord has sent His servant to this location to use him mightily, but he (the ghost) will like the man of God to join hands with him and other spiritual forces so as to help bring instant success into the work of God on the mountain. The man of God spoke to this ghost and replied that he would like to do so (by joining hands with them), but the one: God who sent him here has held both his hands, so there is no way he could join hands with him or any other spiritual force. Immediately after hearing the declaration of the man of God, the ghost disappeared.</p>
+                         <p>After many years on the mountain, with various challenges encountered, another man came to ask the man of God to associate himself with their society or group. Advising him that every year he will have to offer unto them a cow, and they will be the ones who will bring the person in charge of bringing him the cow. All the man of God needs to do is to get a particular spot, where he will continually shed and pour the blood of the cow.</p>
+                         <p>They consented on showing him (the man of God) the place he will shed and pour the blood. The man of God replied by saying that God has instructed him not to join with any society. Although the journey was filled with ups and downs yet the man of God stood with Him that called him into the work.</p>
+                         <p>The man of God sold three of five houses he built for him to sustain this vision and today the Lord has raised men of God under him, sick have been healed on this same mountain, ministries raised, and diverse testimonies.</p>
+                         <p>Christ Apostolic Church Ori Oke Aanun Km. 2 Isokun, off Arulogun road, Ojoo Ibadan, is an interdenominational gathering of believers.</p>
+                    </div>
+
+                    
+
+                    <div class="clearfix"></div>
+                    <h3>Recommended for you</h3>
+                    <hr>
+
+                    <div class="col-md-4 col-sm-4"><a href="{% url 'about_omowoli' %}">
+                         <img src="{% static 'Home2/images/img/woli_omo.jpg' %}" class="img-responsive" alt="Omo Woli" width=400 heigth=400>
+                         <h3>Omo Woli</h3>
+                         <p>District Superintendent of C.A.C Ori Oke Aanun</p></a>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4"><a href="{% url 'about_babaaladeolu' %}">
+                         <img src="{% static 'Home2/images/img/baba_aladeolu.jpg' %}" class="img-responsive" alt="Oke Aanu" width=400 heigth=400>
+                         <h3>Baba Orioke</h3>
+                         <p>Founder  C.A.C Mountain of Mercy </p></a>
+                    </div>
+					
+               </div>
+
+          </div>
+     </div>
+</section>
+
+{% endblock content %}

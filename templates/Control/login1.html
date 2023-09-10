@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<style>
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("{% static 'Home/images/img/about.jpg' %}");
+      min-height: 100%;
+      padding: 120px 20px;
+    }
+
+    .w3-bar .w3-button {
+        padding: 16px;
+      }
+    
+
+</style>
+
+    <header class="bgimg-1">
+        <div class="container" >
+
+              <h3 class="w3-large text-3xl md:text-4xl text-center mb-10" style="color:white">Login</h3>
+
+        </div> 
+    </header>
+
+
+    <div class="modal fade" id="membershipForm" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
+        
+      </div>
+
+     <section class="about section" id="about">
+        <div class="container">
+
+            <div class="modal-dialog" role="document">
+  
+                <div class="modal-content">
+                  <div class="modal-header">
+        
+                    <h3 class="modal-title" id="membershipFormLabel">Login as admin</h3>
+                  </div>
+        
+                  <div class="modal-body">
+                    <form class="membership-form webform" role="form" method="POST">
+                        {% csrf_token %}
+                        <label class="sr-only" for="signin-username">Username</label>
+						<input type="text" name="username" placeholder="Username..." class="form-control">
+        
+                        <label class="sr-only" for="signin-password">Password</label>
+						<input type="password" name="password" placeholder="Password..." class="form-control" >
+        
+                        <button type="submit" class="form-control" id="submit-button" name="submit">login</button>
+
+                    </form>
+                  </div>
+        
+                  <div class="modal-footer"></div>
+        
+                </div>
+              </div>
+        </div>
+    </section>
+{% endblock content %}

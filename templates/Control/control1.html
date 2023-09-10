@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("{% static 'Home/images/img/about.jpg' %}");
+      min-height: 100%;
+      padding: 120px 20px; 
+    }
+
+    .w3-bar .w3-button {
+        padding: 16px;
+      }
+    
+
+</style>
+
+    <header class="bgimg-1">
+        <div class="container" >
+
+              <h5 class="w3-large text-3xl md:text-4xl text-center mb-10" style="color:white">Control</h5>
+        </div> 
+    </header>
+
+     <section class="about section" id="about">
+        <div class="container">
+             <div class="row">
+
+                <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300"><a href="{% url 'add_program' %}">
+                         
+                    <div class="team-thumb">
+                        
+
+                        <div class="team-info d-flex flex-column">
+
+                            <h5>Add Program</h5>
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300"><a href="{% url 'add_audio' %}">
+                         
+                    <div class="team-thumb">
+                        
+
+                        <div class="team-info d-flex flex-column">
+
+                            <h5>Upload Audio Messages</h5>
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300"><a href="{% url 'add_video' %}">
+                         
+                    <div class="team-thumb">
+                        
+
+                        <div class="team-info d-flex flex-column">
+
+                            <h5>Upload Video Messages</h5>
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300"><a href="{% url 'add_image' %}">
+                         
+                    <div class="team-thumb">
+                        
+
+                        <div class="team-info d-flex flex-column">
+
+                            <h5>Upload Images</h5>
+                        </div>
+                    </div></a>
+                </div>
+
+
+
+
+                
+                <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300"><a href="{% url 'user_email' %}">
+                         
+                    <div class="team-thumb">
+                        
+
+                        <div class="team-info d-flex flex-column">
+
+                            <h5>Extract e-mail</h5>
+
+
+                        </div>
+                    </div></a>
+                </div>
+
+
+                
+                <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300"><a href="{% url 'user_number' %}">
+                         
+                    <div class="team-thumb">
+                        
+
+                        <div class="team-info d-flex flex-column">
+
+                            <h5>Extract Numbers</h5>
+
+
+                        </div>
+                    </div></a>
+                </div>
+
+                    <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300"><a href="{% url 'pending_testimonies' %}">
+                            
+                        <div class="team-thumb">
+                            
+
+                            <div class="team-info d-flex flex-column">
+
+                                <h5>Pending Testimonies</h5>
+
+    
+                            </div>
+                        </div> </a>
+                    </div>
+
+                 
+                 <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300"><a href="{% url 'bulk_text' %}">
+                         
+                    <div class="team-thumb">
+                        
+
+                        <div class="team-info d-flex flex-column">
+
+                            <h5>Send Bult Text Messages</h5>
+
+
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300"><a href="{% url 'prayer_list' %}">
+                         
+                    <div class="team-thumb">
+                        
+
+                        <div class="team-info d-flex flex-column">
+
+                            <h5>See Prayer Requests</h5>
+
+
+                        </div>
+                    </div></a>
+                </div>
+
+                <div class="ml-lg-auto col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300"><a href="{% url 'bulk_email' %}">
+                         
+                    <div class="team-thumb">
+                        
+
+                        <div class="team-info d-flex flex-column">
+
+                            <h5>Send Bult e-mail Messages</h5>
+                        </div>
+                    </div></a>
+                </div>
+
+             </div>
+        </div>
+</section>
+{% endblock content %}

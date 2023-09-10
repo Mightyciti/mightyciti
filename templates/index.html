@@ -1,0 +1,234 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+  <!--==========================
+  Hero Section
+  ============================-->
+
+     <section id="home" class="main-home parallax-section" style="background-image: url('{% static "Home2/images/img/omowoli_bg.jpg" %}');">
+          <div class="overlay"></div>
+          <div id="particles-js"></div>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="hero-logo">
+                              <img class="" src="{% static 'Home2/images/img/logo/logo.png' %}" alt="Omowoli">
+                         </div>
+                         <h3>Welcome to the official website of </h3>
+                         <h1>Pastor <span class="rotating"> Isaiah O. Alade </span></h1>
+                         <div class="actions">
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+  <!--==========================
+  Header Section
+  ============================-->
+
+  <!--==========================
+  About Section
+  ============================-->
+  <section id="about">
+    <div class="container about-container wow fadeInUp">
+      <div class="row">
+
+        <div class="col-lg-5 about-img">
+          <img src="{% static "Home2/images/img/front_woli.jpg" %}" alt="">
+        </div>
+
+        <div class="col-md-6 about-content text-justify">
+          <h1 class="about-title text-block">MEET PASTOR ISAIAH ALADEOLU</h1>
+          <p class="about-text">
+               This scripture is fulfilled in the life of Son of Prophet (Omowoli) born on July 16, 1977 into a humble family of Prophet Moses Alade & Midwife Grace Olufunmilade Alade in the city of Ibadan, Oyo State, Nigeria. His father is from a village in Ijaye, Oyo State located in the south-western part of Nigeria and mother from Ode-Omu in Osun State.
+          </p>
+          <p class="about-text">
+               Isaiah Olaoluwatomiyole Oluwatoyi Alade often humorously states that his family is a linage of prophets as his grandfather, in person of Prophet Jacob Alade, and his father are both prophets though what he possessed were physical intangibles such as focus, consistency, diligence, ambition, a brilliant mind and a determination to succeed in life.
+          </p>
+          <p class="about-text">
+               In 1991 Isaiah Alade was admitted into Bashorun Ojoo High School, Ibadan, Oyo State, in western Nigeria and as a youth he discovered a passion for ministerial work that even his mates in the school called him Pastor<span><a href="{% url 'about_omowoli' %}"> .... continue reading</a></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Services Section
+  ============================-->
+  <section id="services">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Programs</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Fixed weekly and monthly programs</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-calendar"></i></div>
+          <h4 class="service-title"><a href="">Sunday : Sunday Service</a></h4>
+          <p class="service-description">8 AM</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-calendar"></i></div>
+          <h4 class="service-title"><a href="">Tuesday : 90 Minutes of Prayer</a></h4>
+          <p class="service-description">10 - 11:45 AM | 12 - 1:30 PM</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-calendar"></i></div>
+          <h4 class="service-title"><a href="">Wednesday : Mercy Meeting | Ipade Aanun</a></h4>
+          <p class="service-description">Every Wednessday & Friday <br> 8 AM | 11 PM</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-calendar"></i></div>
+          <h4 class="service-title"><a href="">Mercy Once Again</a></h4>
+          <p class="service-description">Every 3rd Wed, Thur & Fri of the month </br> 8 AM  | 11 PM</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-calendar"></i></div>
+          <h4 class="service-title"><a href="">Anointing Service: Let there be way</a></h4>
+          <p class="service-description">Every 1st Day of the Month </br> 6:00 AM</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-calendar"></i></div>
+          <h4 class="service-title"><a href="">Anointing Service: Let there be way</a></h4>
+          <p class="service-description">Every 1st Day of the Month </br> 6:00 AM</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!--==========================
+  Subscrbe Section
+  ============================-->
+  <section id="subscribe">
+    <div class="container fadeInUp">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="subscribe-title">Subscribe For Updates</h3>
+          <p class="subscribe-text">Join our subscribers and get access to the latest news, programs, and pdates from Omo Woli much more!</p>
+          <form action="" method="POST" class="contact-form webform">
+               
+                 <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+          </form>
+          <hr>
+          <h6 class="subscribe-title"><a href=""> Click me</a> to get daily prophetic prayers on WhatsApp</h6>
+          <hr>
+        </div>
+
+        <div class="col-md-6">
+          <div class="responsive-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.7954292180602!2d3.9177595152758813!3d7.487826613277392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039edecf1f4cec1%3A0xc8b84673e7933b65!2sChrist%20Apostolic%20Church%20Ori%20Oke%20Anu%20Ibadan!5e0!3m2!1sen!2sng!4v1651150009139!5m2!1sen!2sng" width="1920" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p style="color:white; text-align:center"><i class="fa fa-map-marker mr-1"></i> C.A.C Ori Oke Aanun Km. 2 Isokun, off Arulogun road, Ojoo Ibadan</br>
+              <i class="fa fa-phone mr-1"></i><strong>Prayer Line:</strong> 08028295998, 08075459001, 08102901778 </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Porfolio Section
+  ============================-->
+  <section id="portfolio">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Special Programs</h3>
+        </div>
+      </div>
+
+      <div id="slider" class="container-fluid">
+        <figure>
+          {% for prog in program %}
+          <img src="{{prog.Program_Design.url}}" alt>
+          {% endfor %}
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Team Section
+  ============================-->
+  <section id="team">
+    <div class="container wow fadeInUp justify-content-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Authorities</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Meet the authorities of cac mercy prayer mountain</p>
+        </div>
+      </div>
+
+      <div class="row ">
+        <div class="col-md-6">
+          <div class="member">
+            <div class="pic"><img src="{% static 'Home2/images/img/baba_aladeolu.jpg' %}" alt="Baba Aladeolu" width=400 heigth=400></div>
+            <h4>Propet Moses Alade</h4>
+            <span>Founder  C.A.C Mountain of Mercy </span>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="member">
+            <div class="pic"><img src="{% static 'Home2/images/img/woli_omo.jpg' %}" alt="Omo Woli" width=400 heigth=400></div>
+            <h4>Pastor Isaiah. O. Alade</h4>
+            <span>District Superintendent of C.A.C Ori Oke Aanun</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+  Testimonials Section
+  ============================-->
+  <section id="testimonials">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Testimonies</h3>
+          <div class="section-title-divider"></div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="quote" id="text-slider">
+            <ul>
+              {% for test in testimony %}
+              <li>
+              <div class="text-slider-container">
+              <h4>{{test.Name}}</h4>
+                  <p>	{{test.Testimony}}</p>
+              <h5>{{test.State}}</h5>
+              </div>
+              </li>
+              {% endfor %}
+          </ul>
+          </div>
+        </div>
+      </div>
+  </section>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  {% endblock content %} 

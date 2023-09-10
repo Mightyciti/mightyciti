@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- Home Section -->
+
+<section id="home" class="main-about parallax-section" style="background-image: url('https://images.unsplash.com/photo-1598006640672-f0cc33c40702?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGhvdG9ncmFwaHklMjBzdHVkaW98ZW58MHx8MHx8&w=1000&q=80');">
+     <div class="overlay"></div>
+     <div id="particles-js"></div>
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <h1>Photo Gallery</h1>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+<!-- Gallery Section -->
+
+<section id="gallery">
+     <div class="container wow">
+          <div class="row">
+               <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <span></span>
+                    {% for pic in gallery %}
+                    <div class="col-md-6 col-sm-6">
+                         <div class="gallery-thumb">
+                              <a href="{{pic.Image_File.url}}" class="image-popup">
+                                   <img src="{{pic.Image_File.url}}" class="img-responsive" alt="Gallery Image">
+                              </a>
+                         </div>
+                    </div>
+                    {% endfor %}
+               </div>
+          </div>
+          <div class="pagination">
+               <span class="step-links">
+                   {% if gallery.has_previous %}
+                       <a href="?page=1">&laquo; first</a>
+                       <a href="?page={{ gallery.previous_page_number }}">previous</a>
+                   {% endif %}
+           
+                   <span class="current">
+                       Page {{ gallery.number }} of {{ gallery.paginator.num_pages }}.
+                   </span>
+           
+                   {% if gallery.has_next %}
+                       <a href="?page={{ gallery.next_page_number }}">next</a>
+                       <a href="?page={{ gallery.paginator.num_pages }}">last &raquo;</a>
+                   {% endif %}
+               </span>
+          </div>
+     </div>
+</section>
+
+
+{% endblock content %}

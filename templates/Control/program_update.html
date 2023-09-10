@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<style>
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("{% static 'Home/images/img/about.jpg' %}");
+      min-height: 100%;
+      padding: 120px 20px;
+    }
+
+    .w3-bar .w3-button {
+        padding: 16px;
+      }
+    
+
+</style>
+
+    <header class="bgimg-1">
+        <div class="container" >
+
+              <h3 class="w3-large text-3xl md:text-4xl text-center mb-10" style="color:white">Testimony</h3>
+
+        </div> 
+    </header>
+
+     <section class="about section" id="about">
+        <div class="container">
+            <h3 class="w3-large text-3xl md:text-4xl text-center mb-10" style="color:black">Add Programs</h3>
+            <p class="text-center" style="color:black"> Your followers will get updates for each program added </p>
+            <div role="document" data-aos="fade-up" data-aos-delay="900">
+                <form class="membership-form webform" method="POST" role="form">
+                    {% csrf_token %}
+                    {{form|crispy}}
+                    <button type="submit" class="form-control" id="submit-button" name="submit">Add Program</button>
+                </form>
+            </div>
+        </div>
+</section>
+{% endblock content %}

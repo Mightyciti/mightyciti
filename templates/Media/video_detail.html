@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    header {
+        text-align: center;
+      }
+      
+      body {
+        text-align: center;
+      }
+      
+      .center {
+          margin-left: auto;
+          margin-right: auto;
+          display: block
+      }
+ 
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 35px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    
+    .video-container iframe {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .container1 {
+        width: 768px;
+        margin: 0 auto;
+      }
+      
+      img {max-width:100%; height:auto}
+      
+      .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .embed-container iframe,
+      .embed-container object,
+      .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .video-player__playing {
+        margin-bottom: 1.000em;
+      }
+      
+      .video-player__thumbs {
+        overflow: hidden;
+      }
+      
+      .video-thumb {
+        float: left;
+        width: 23.5%;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 13%;
+        margin-bottom: 0.375em;
+        cursor: pointer;
+      }
+      
+      .video-thumb:not(:last-child) {
+        margin-right: 2%;
+      }
+      
+      .video-thumb.active {
+        cursor: default;
+      }
+      
+      .video-thumb:before,
+      .video-thumb:after {
+        display: block;
+        position: absolute;
+        transition: all 250ms ease-out;
+        z-index: 1;
+      }
+      
+      .video-thumb:before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(247, 148, 30, 0);
+      }
+      
+      
+      .video-thumb:after {
+        content: "\f144";
+        font-family: "FontAwesome";
+        top: 50%;
+        left: 50%;
+        margin: -0.458em 0 0 -0.500em;
+        color: rgba(255, 255, 255, 0);
+        font-size: 3.000em;
+        line-height: 1;
+      }
+      
+      .video-thumb img {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 0;
+      }
+ 
+</style>
+
+<section id="home" class="parallax-section" style="background-color: black;">
+    <div class="overlay"></div>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h1>{{video.Video_Title}}</h1>
+            </div>
+        </div>
+    </div> 
+</section>
+
+
+
+<section class="about section" id="about">
+    <div class="container">
+        <div class="container video-container iframe">
+            <iframe src="{{video.embeded_link}}" width="967" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+        <div class="video-player__thumbs ">
+            {% for vid in others %}
+          <div data-video="92UXfEIc4lI" class="video-thumb active"><img src="https://img.youtube.com/vi/92UXfEIc4lI/hqdefault.jpg"></div>
+          {% endfor %}
+        </div>
+    </div>
+</section>
+  
+{% endblock content %}

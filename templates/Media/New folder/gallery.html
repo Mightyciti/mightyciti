@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("{% static 'Home/images/img/about.jpg' %}");
+      min-height: 100%;
+      padding: 120px 20px;
+    }
+
+    .w3-bar .w3-button {
+        padding: 16px;
+      }
+      
+      .-fx-image-gal {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 960px;
+        justify-content: center;
+      }
+      .-fx-gal-item {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+      }
+      
+      .-fx-gal-item a {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+      }
+      
+      .-fx-gal-image-thumb img {
+        width: 100%;
+        cursor: pointer;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        filter: grayscale(100%);
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+      }
+      
+      .-fx-gal-image-thumb:hover img {
+        cursor: pointer;
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        filter: grayscale(0%);
+        transform: scale(1.5);
+        transition: all 0.5s ease;
+      }
+      @media (min-width: 420px) {
+        .-fx-image-gal {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .-fx-gal-item {
+          width: 50%;
+        }
+      }
+      @media (min-width: 768px) {
+        .-fx-gal-item {
+          width: 33.33%;
+        }
+      }
+            
+
+</style>
+
+    <header class="bgimg-1">
+        <div class="container" >
+
+              <h3 class="w3-large text-3xl md:text-4xl text-center mb-10" style="color:white">Photo Gallery</h3>
+        </div> 
+    </header>
+
+     <section class="about section" id="about">
+        <div class="container">
+          {% for image in gallery %}
+          <div class="-fx-image-gal">
+            <div class="-fx-gal-item">
+              <div class="-fx-gal-image-thumb" tabindex="1">
+                  <img src="{{image.Image_File.url}}" />
+                </a>
+              </div>
+            </div><!-- /-fx-gal-item -->
+          {% endfor %}
+          </div><!-- /gallery -->
+</section>
+{% endblock content %}
